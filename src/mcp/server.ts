@@ -31,7 +31,9 @@ const requestHandler = async (req: any) => {
     };
   } else if (req.type === "call_tool") {
     const { tool_name, arguments: args } = req;
-    logger.info(`Calling tool ${tool_name} with arguments ${JSON.stringify(args)}`);
+    logger.info(
+      `Calling tool ${tool_name} with arguments ${JSON.stringify(args)}`
+    );
 
     if (tool_name === "hotel_search") {
       try {
@@ -80,7 +82,7 @@ const errorHandler = (error: any) => {
 const app = express();
 app.use(express.json());
 
-app.post("/", async (req, res) => {
+app.post("/", async (req: express.Request, res: express.Response) => {
   try {
     const result = await requestHandler(req.body);
     res.json(result);
