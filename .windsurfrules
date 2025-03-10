@@ -1,0 +1,15 @@
+## 利用言語
+日本語
+
+## プロジェクトの知識
+./spec/knowledge.md
+
+## 計画
+./spec/plan_**.md
+辞書順に参照すること
+
+## アーキテクチャ
+./spec/architecture.md
+
+## コミットルール
+/Users/tk/dev/rules/commit.md
