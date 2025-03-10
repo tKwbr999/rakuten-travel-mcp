@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "properties": {
+    "hotels": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Hotel"
+      }
+    },
+    "pagingInfo": {
+      "$ref": "#/components/schemas/PagingInfo"
+    }
+  },
+  "required": [
+    "hotels",
+    "pagingInfo"
+  ],
+  "components": {
+    "schemas": {
+      "Hotel": {
+        "type": "object",
+        "properties": {
+          "hotelBasicInfo": {
+            "$ref": "#/components/schemas/HotelBasicInfo"
+          }
+        },
+        "required": [
+          "hotelBasicInfo"
+        ]
+      },
+      "HotelBasicInfo": {
+        "type": "object",
+        "properties": {
+          "hotelNo": {
+            "type": "integer"
+          },
+          "hotelName": {
+            "type": "string"
+          },
+          "hotelKanaName": {
+            "type": "string"
+          },
+          "hotelSpecial": {
+            "type": "string"
+          },
+          "hotelMinPrice": {
+            "type": "integer"
+          },
+          "hotelMaxPrice": {
+            "type": "integer"
+          },
+          "latitude": {
+            "type": "number"
+          },
+          "longitude": {
+            "type": "number"
+          },
+          "postalCode": {
+            "type": "string"
+          },
+          "address1": {
+            "type": "string"
+          },
+          "address2": {
+            "type": "string"
+          },
+          "telephoneNo": {
+            "type": "string"
+          },
+          "faxNo": {
+            "type": "string"
+          },
+          "access": {
+            "type": "string"
+          },
+          "parkingInformation": {
+            "type": "string"
+          },
+          "hotelImageUrl": {
+            "type": "string"
+          },
+          "hotelThumbnailUrl": {
+            "type": "string"
+          },
+          "roomImageUrl": {
+            "type": "string"
+          },
+          "roomThumbnailUrl": {
+            "type": "string"
+          },
+          "hotelMapImageUrl": {
+            "type": "string"
+          },
+          "reviewCount": {
+            "type": "integer"
+          },
+          "reviewAverage": {
+            "type": "number"
+          },
+          "userReview": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "hotelNo",
+          "hotelName",
+          "hotelKanaName",
+          "hotelSpecial",
+          "hotelMinPrice",
+          "hotelMaxPrice",
+          "latitude",
+          "longitude",
+          "postalCode",
+          "address1",
+          "address2",
+          "telephoneNo",
+          "faxNo",
+          "access",
+          "parkingInformation",
+          "hotelImageUrl",
+          "hotelThumbnailUrl",
+          "roomImageUrl",
+          "roomThumbnailUrl",
+          "hotelMapImageUrl",
+          "reviewCount",
+          "reviewAverage",
+          "userReview"
+        ]
+      },
+      "PagingInfo": {
+        "type": "object",
+        "properties": {
+          "recordCount": {
+            "type": "integer"
+          },
+          "pageCount": {
+            "type": "integer"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "first": {
+            "type": "integer"
+          },
+          "last": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "recordCount",
+          "pageCount",
+          "page",
+          "first",
+          "last"
+        ]
+      }
+    }
+  }
+}

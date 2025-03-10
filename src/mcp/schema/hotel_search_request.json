@@ -1,0 +1,78 @@
+{
+  "type": "object",
+  "properties": {
+    "keyword": {
+      "type": "string",
+      "description": "検索キーワード"
+    },
+    "areaCode": {
+      "type": "string",
+      "description": "エリアコード"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "緯度"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "経度"
+    },
+    "searchRadius": {
+      "type": "number",
+      "description": "検索半径 (km)"
+    },
+    "checkInDate": {
+      "type": "string",
+      "format": "date",
+      "description": "チェックイン日 (YYYY-MM-DD)"
+    },
+    "checkOutDate": {
+      "type": "string",
+      "format": "date",
+      "description": "チェックアウト日 (YYYY-MM-DD)"
+    },
+    "adultNum": {
+      "type": "integer",
+      "description": "大人人数"
+    },
+    "childrenNum": {
+      "type": "integer",
+      "description": "子供人数"
+    },
+    "roomNum": {
+      "type": "integer",
+      "description": "部屋数"
+    },
+    "sort": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "hotelRatingHigh",
+        "hotelRatingLow",
+        "priceLow",
+        "priceHigh",
+        "reviewHigh",
+        "reviewLow"
+      ],
+      "description": "ソート順"
+    },
+    "order": {
+      "type": "string",
+      "enum": [
+        "ascending",
+        "descending"
+      ],
+      "description": "順序"
+    },
+    "page": {
+      "type": "integer",
+      "description": "ページ番号"
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "ページサイズ"
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
