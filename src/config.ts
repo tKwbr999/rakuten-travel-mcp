@@ -3,10 +3,10 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const config = {
-  rakutenApiKey: process.env.RAKUTEN_API_KEY || "",
+  rakutenApplicationId: process.env.RAKUTEN_APPLICATION_ID || "",
   mcpPort: process.env.MCP_PORT ? parseInt(process.env.MCP_PORT) : 3000,
 };
 
-if (!config.rakutenApiKey) {
-  console.warn("RAKUTEN_API_KEY is not set in environment variables.");
+if (!config.rakutenApplicationId) {
+  console.warn("RAKUTEN_APPLICATION_ID is not set in environment variables.");
 }

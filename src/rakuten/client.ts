@@ -7,14 +7,16 @@ const BASE_URL = "https://app.rakuten.co.jp/services/api/Travel/";
 export const client = axios.create({
   baseURL: BASE_URL,
   params: {
-    applicationId: config.rakutenApiKey,
+    applicationId: config.rakutenApplicationId,
     format: "json",
   },
 });
 
 client.interceptors.request.use(
   (request) => {
-    logger.debug(`[Rakuten API Request] ${request.method?.toUpperCase()} ${request.url}`);
+    logger.debug(
+      `[Rakuten API Request] ${request.method?.toUpperCase()} ${request.url}`
+    );
     return request;
   },
   (error) => {
@@ -23,9 +25,17 @@ client.interceptors.request.use(
   }
 );
 
+export const simpleHotelSearch = async (params: any) => {
+  return client
+    .get("SimpleHotelSearch/20170426", { params })
+    .then((res) => res.data);
+};
+
 client.interceptors.response.use(
   (response) => {
-    logger.debug(`[Rakuten API Response] ${response.status} ${response.config.url}`);
+    logger.debug(
+      `[Rakuten API Response] ${response.status} ${response.config.url}`
+    );
     return response;
   },
   (error) => {
