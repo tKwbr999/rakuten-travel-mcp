@@ -37,6 +37,7 @@ const requestHandler = async (req: any) => {
 
     if (tool_name === "hotel_search") {
       try {
+        logger.info("Calling hotelSearch function", args);
         const result = await hotelSearch(args);
         return {
           content: [
