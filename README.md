@@ -1,7 +1,7 @@
 # 楽天トラベルMCP
 
 楽天トラベルAPIをModel Context Protocol (MCP)に対応させるサーバーです。LLMアプリケーション（Claude、GPT-4等）から楽天トラベルAPIを利用可能にします。
-
+https://webservice.rakuten.co.jp/documentation/simple-hotel-search
 ## システム概要
 
 本システムは以下の機能を提供します：
